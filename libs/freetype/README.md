@@ -39,7 +39,7 @@ pub fn build(b: *Build) void {
 and optionaly add harfbuzz:
 
 ```zig
-exe.addModule("harbuzz", freetype.harfbuzzModule());
+exe.addModule("harfbuzz", freetype.harfbuzzModule(b));
 freetype.link(b, exe, .{ .harfbuzz = .{} });
 ```
 

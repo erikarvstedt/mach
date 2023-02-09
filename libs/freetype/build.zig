@@ -15,7 +15,6 @@ pub fn module(b: *std.Build) *std.build.Module {
 
 pub fn harfbuzzModule(b: *std.Build) *std.build.Module {
     return b.createModule(.{
-        .name = "harfbuzz",
         .source_file = .{ .path = sdkPath("/src/harfbuzz/main.zig") },
         .dependencies = &.{
             .{ .name = "freetype", .module = module(b) },
